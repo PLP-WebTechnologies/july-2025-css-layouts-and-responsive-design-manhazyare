@@ -1,0 +1,120 @@
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  background: #4CAF50;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex; /* Flexbox for nav alignment */
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.navbar li {
+  margin: 0 1rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Grid Layout for Main */
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* Content + Sidebar */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Content Section */
+.content {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Flexbox for Cards */
+.card-container {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* wrap on smaller screens */
+}
+
+.card {
+  flex: 1 1 200px;
+  background: #e0e0e0;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.card:hover {
+  background: #ccc;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #f0f0f0;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* Footer */
+.site-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+/* ---------------------- */
+/* RESPONSIVENESS */
+/* ---------------------- */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* stack content and sidebar */
+  }
+
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .navbar li {
+    margin: 0.5rem 0;
+  }
+}
